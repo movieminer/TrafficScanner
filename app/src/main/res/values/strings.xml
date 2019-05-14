@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TrafficScanner</string>
+    <string name="main_button">Ga naar camera</string>
+    <string name="picture">Take a picture</string>
 </resources>
