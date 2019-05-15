@@ -27,6 +27,7 @@ import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;
+import org.opencv.core.Range;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
@@ -143,12 +144,12 @@ public class CameraActivity extends AppCompatActivity implements CameraBridgeVie
                 double maxcos = cos.get(cos.size() - 1);
 
                 if (numberVertices == 4 && mincos >= -0.1 && maxcos <= 0.3) {
-                    setLabel(dst, "Rect", cnt);
+                    Rect rect_Crop= new Rect(cnt.get(0,1));
+                    Mat image_crop = new Mat(dst,rect_Crop);
+
                 }
 
             }
-
-
         }
 
         return dst;
